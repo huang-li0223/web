@@ -76,7 +76,7 @@
     }
 
     .timeline-item {
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
 
     .timeline-item h3 {
@@ -112,15 +112,54 @@
       font-size: 0.9em;
     }
 
+    /* 社團經驗卡片區 */
+    .club-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 15px;
+    }
+
+    .club-card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      width: calc(50% - 10px);
+      transition: transform 0.3s;
+    }
+
+    .club-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .club-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .club-card h4 {
+      color: #d36ce8;
+      margin: 10px 15px 5px;
+    }
+
+    .club-card p {
+      margin: 0 15px 15px;
+      color: #555;
+      font-size: 0.95em;
+    }
+
     @media (max-width: 600px) {
       header h1 { font-size: 2em; }
       header img { width: 120px; height: 120px; }
+      .club-card { width: 100%; }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://i.imgur.com/yYyWb8A.png" alt="個人照片"> <!-- 換成你的照片 -->
+    <img src="images/profile.jpg" alt="個人照片">
     <h1>黃巧莉 Chiao-Li Huang</h1>
     <p>國立台灣師範大學 科技應用與人力資源發展學系 大二</p>
   </header>
@@ -136,18 +175,16 @@
   <section id="about">
     <h2>關於我</h2>
     <p>嗨！我是黃巧莉，目前就讀於國立台灣師範大學科技應用與人力資源發展學系。我熱愛心理學、教育科技與設計，希望能在科技與人之間找到更好的連結方式。除了學業，我也喜歡觀察生活、嘗試新事物與紀錄創意靈感。</p>
-
     <blockquote>「學習不只是為了得到答案，而是為了理解世界的更多可能。」</blockquote>
   </section>
 
   <section id="skills">
     <h2>興趣與專長</h2>
     <ul>
-      <li>🧠 心理學與人際互動研究</li>
-      <li>💻 教育科技與資料分析基礎</li>
-      <li>🎨 平面設計與簡報視覺規劃</li>
-      <li>🗣️ 溝通與團隊合作能力</li>
-      <li>📊 研究報告與簡報製作 (Tableau, Canva, PowerPoint)</li>
+      <li>心理學與人際互動研究</li>
+      <li>教育科技與資料分析基礎</li>
+      <li>溝通與團隊合作能力</li>
+      <li>研究報告與簡報製作 (Tableau, Canva, PowerPoint)</li>
     </ul>
   </section>
 
@@ -155,13 +192,49 @@
     <h2>個人經歷</h2>
     <div class="timeline">
       <div class="timeline-item">
-        <h3>2023 - 至今｜國立台灣師範大學 科技系</h3>
+        <h3>2024 國立中央大學附屬中壢高級中學 畢業</h3>
         <p>主修科技應用與人力資源發展，學習教育科技、資料分析與組織發展等領域。</p>
       </div>
+
+      <!-- 高中社團與幹部經驗 -->
       <div class="timeline-item">
-        <h3>2024｜心理健康與工作場所專題研究</h3>
-        <p>以 Kaggle 資料集分析員工心理健康與企業規模的關聯，並使用 Tableau 製作視覺化報告。</p>
+        <h3>高中社團與幹部經驗</h3>
+        <div class="club-gallery">
+          <div class="club-card">
+            <img src="images/club1.jpg" alt="高中吉他社">
+            <h4>吉他社 社長</h4>
+            <p>帶領社員籌辦校內外表演與音樂交流活動，培養團隊合作與舞台統籌能力。</p>
+          </div>
+          <div class="club-card">
+            <img src="images/club2.jpg" alt="高中畢聯會">
+            <h4>畢聯會 活動組</h4>
+            <p>參與畢業典禮與畢旅規劃，學習活動流程設計與人際協調。</p>
+          </div>
+        </div>
       </div>
+
+      <div class="timeline-item">
+        <h3>2024至今 國立台灣師範大學</h3>
+        <p>科技應用與人力資源發展學系</p>
+      </div>
+
+      <!-- 大學社團與幹部經驗 -->
+      <div class="timeline-item">
+        <h3>大學社團與幹部經驗</h3>
+        <div class="club-gallery">
+          <div class="club-card">
+            <img src="images/uni_club1.jpg" alt="大學人資系學會">
+            <h4>人資系學會 公關部</h4>
+            <p>負責對外聯繫、活動宣傳與合作窗口，培養溝通與品牌形象維護能力。</p>
+          </div>
+          <div class="club-card">
+            <img src="images/uni_club2.jpg" alt="系迎新活動">
+            <h4>系迎新活動 主持人</h4>
+            <p>策劃並主持新生迎新活動，提升舞台口語表達與組織協調能力。</p>
+          </div>
+        </div>
+      </div>
+
       <div class="timeline-item">
         <h3>2025｜腦機介面訓練協定遊戲化研究報告</h3>
         <p>研究如何透過遊戲化設計提升使用者在腦機介面訓練中的動機與表現。</p>
@@ -173,7 +246,6 @@
     <h2>目標與理念</h2>
     <p>我希望未來能結合科技、人力資源與心理學，打造讓人們能更有效學習與成長的系統。  
     無論是在教育領域或企業培訓中，我都相信「理解人」是設計與創新的核心。</p>
-
     <p>未來短期目標包括：</p>
     <ul>
       <li>持續累積人力資源與教育科技領域的實務經驗</li>
